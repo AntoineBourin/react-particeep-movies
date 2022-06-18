@@ -1,12 +1,11 @@
 import React from 'react';
-import { QueryClientProvider } from 'react-query';
-import Home from './components/pages/Home';
-import queryClient from './services/client';
+import Home from './components/pages/Home/Home';
+import MoviesContextProvider from './contexts/movies/MoviesContext';
 
 const App = () => (
-  <QueryClientProvider client={queryClient}>
+  <MoviesContextProvider>
     <Home />
-  </QueryClientProvider>
+  </MoviesContextProvider>
 );
 
 export default App;
